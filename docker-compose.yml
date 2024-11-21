@@ -13,3 +13,10 @@ services:
       - 35729:35729
     volumes:
       - .:/srv/jekyll
+
+  jest:
+    build:
+      context: .
+      dockerfile: jest.dockerfile
+    command: >
+      sh -c "npm run test"
