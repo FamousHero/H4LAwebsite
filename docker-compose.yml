@@ -20,3 +20,5 @@ services:
       dockerfile: jest.dockerfile
     command: >
       sh -c "npm run test"
+    profiles: 
+      - test
