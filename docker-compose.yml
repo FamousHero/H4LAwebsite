@@ -1,4 +1,5 @@
-version: "3"
+name: HackForLA
+
 services:
   hfla_site:
     image: hackforlaops/ghpages:latest
@@ -18,6 +19,8 @@ services:
     build:
       context: .
       dockerfile: jest.dockerfile
+    volumes:
+      - .:/code
     command: >
       sh -c "npm run test"
     profiles: 
