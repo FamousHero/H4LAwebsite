@@ -21,7 +21,6 @@ services:
       dockerfile: jest.dockerfile
     volumes:
       - .:/code
-    command: >
-      sh -c "npm run test"
+    command: sh -c "/code/entrypoint.sh"
     profiles: 
       - test
